@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vendor Management System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        .sidebar {
+            width: 200px;
+            background-color: #2c3e50;
+            color: white;
+            height: 100vh;
+            padding-top: 20px;
+        }
+        .sidebar a {
+            display: block;
+            color: white;
+            padding: 10px;
+            text-decoration: none;
+            margin: 10px 0;
+        }
+        .sidebar a:hover {
+            background-color: #34495e;
+        }
+        .content {
+            flex: 1;
+            padding: 20px;
+        }
+        .card {
+            background-color: #ecf0f1;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+        .table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        .table th, .table td {
+            padding: 10px;
+            border: 1px solid #bdc3c7;
+        }
+        .table th {
+            background-color: #34495e;
+            color: white;
+        }
+        .btn {
+            padding: 10px 20px;
+            background-color: #2980b9;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .btn:hover {
+            background-color: #3498db;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <a href="#dashboard">Dashboard</a>
+        <a href="#vendors">Vendors</a>
+        <a href="#contracts">Contracts</a>
+        <a href="#invoices">Invoices</a>
+        <a href="#reports">Reports</a>
+        <a href="#settings">Settings</a>
+    </div>
+    <div class="content">
+        <!-- Dashboard -->
+        <div id="dashboard" class="card">
+            <h2>Dashboard</h2>
+            <div>
+                <h3>Key Metrics</h3>
+                <p>Active IRIS Vendors: 120</p>
+                <p>Pending Contracts: 15</p>
+                <p>Outstanding Invoices: $50,000</p>
+                <p>Upcoming Renewals: 5</p>
+            </div>
+            <div>
+                <h3>Recent Activities</h3>
+                <ul>
+                    <li>Vendor ABC added</li>
+                    <li>Contract XYZ updated</li>
+                    <li>Invoice 123 approved</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Notifications</h3>
+                <ul>
+                    <li>Contract XYZ needs renewal</li>
+                    <li>Vendor DEF compliance issue</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Vendors Module -->
+        <div id="vendors" class="card">
+            <h2>Vendors</h2>
+            <input type="text" placeholder="Search...">
+            <button class="btn">Search</button>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Vendor Name</th>
+                        <th>Contact</th>
+                        <th>Status</th>
+                        <th>Rating</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>ABC Corp</td>
+                        <td>John Doe</td>
+                        <td>Active</td>
+                        <td>4.5</td>
+                        <td><a href="#" class="btn">View</a> <a href="#" class="btn">Edit</a></td>
+                    </tr>
+                    <tr>
+                        <td>XYZ Solutions</td>
+                        <td>Jane Smith</td>
+                        <td>Pending</td>
+                        <td>3.8</td>
+                        <td><a href="#" class="btn">View</a> <a href="#" class="btn">Edit</a></td>
+                    </tr>
+                    <tr>
+                        <td>DEF Enterprises</td>
+                        <td>Bob Johnson</td>
+                        <td>Inactive</td>
+                        <td>2.9</td>
+                        <td><a href="#" class="btn">View</a> <a href="#" class="btn">Edit</a></td>
+                    </tr>
+                </tbody>
+            </table>
+            <a href="#" class="btn">Add New Vendor</a>
+        </div>
+
+        <!-- Contract Details -->
+        <div id="contracts" class="card">
+            <h2>Contract Details</h2>
+            <p><strong>Contract Name:</strong> XYZ Services</p>
+            <p><strong>Vendor:</strong> ABC Corp</p>
+            <p><strong>Start Date:</strong> 2024-01-01</p>
+            <p><strong>End Date:</strong> 2024-12-31</p>
+            <p><strong>Status:</strong> Active</p>
+            <h3>Contract Terms:</h3>
+            <p>Service Level Agreement: ...</p>
+            <p>Payment Terms: ...</p>
+            <h3>Attachments:</h3>
+            <p><a href="#">Contract.pdf</a></p>
+            <p><a href="#">SLA.pdf</a></p>
+            <a href="#" class="btn">Edit Contract</a>
+            <a href="#" class="btn">Terminate Contract</a>
+            <a href="#" class="btn">Renew Contract</a>
+        </div>
+
+        <!-- Invoices Module -->
+        <div id="invoices" class="card">
+            <h2>Invoices</h2>
+            <input type="text" placeholder="Search...">
+            <button class="btn">Search</button>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Invoice Number</th>
+                        <th>Vendor</th>
+                        <th>Amount</th>
+                        <th>Due Date</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>INV-123</td>
+                        <td>ABC Corp</td>
+                        <td>$10,000</td>
+                        <td>2024-07-15</td>
+                        <td>Pending</td>
+                        <td><a href="#" class="btn">View</a></td>
+                    </tr>
+                    <tr>
+                        <td>INV-456</td>
+                        <td>XYZ Sol</td>
+                        <td>$5,000</td>
+                        <td>2024-07-20</td>
+                        <td>Approved</td>
+                        <td><a href="#" class="btn">View</a></td>
+                    </tr>
+                    <tr>
+                        <td>INV-789</td>
+                        <td>DEF Ent</td>
+                        <td>$3,000</td>
+                        <td>2024-08-01</td>
+                        <td>Paid</td>
+                        <td><a href="#" class="btn">View</a></td>
+                    </tr>
+                </tbody>
+            </table>
+            <a href="#" class="btn">Submit New Invoice</a>
+        </div>
+    </div>
+</body>
+</html>
